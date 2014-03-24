@@ -1,0 +1,890 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01162DCF18D87AE900A6AAA0 /* LFXObserverProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 01162DCD18D87AE900A6AAA0 /* LFXObserverProxy.h */; };
+		01162DD018D87AE900A6AAA0 /* LFXObserverProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01162DCE18D87AE900A6AAA0 /* LFXObserverProxy.m */; };
+		01162DD318D91ABC00A6AAA0 /* NSMethodSignature+LFXExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 01162DD118D91ABC00A6AAA0 /* NSMethodSignature+LFXExtensions.h */; };
+		01162DD418D91ABC00A6AAA0 /* NSMethodSignature+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01162DD218D91ABC00A6AAA0 /* NSMethodSignature+LFXExtensions.m */; };
+		01406B4618D2AC9C00120AC2 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911AA18D035AA00AD0A54 /* DDLog.m */; };
+		01406B6718D2E91000120AC2 /* LFXBinaryTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 01406B6518D2E91000120AC2 /* LFXBinaryTypes.h */; };
+		01406B6818D2E91000120AC2 /* LFXBinaryTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 01406B6618D2E91000120AC2 /* LFXBinaryTypes.m */; };
+		01A9105118D027B200AD0A54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A9105018D027B200AD0A54 /* Foundation.framework */; };
+		01A911E818D035BF00AD0A54 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9107C18D035A900AD0A54 /* GCDAsyncSocket.m */; };
+		01A911E918D035C100AD0A54 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9107E18D035A900AD0A54 /* GCDAsyncUdpSocket.m */; };
+		01A9122A18D037DF00AD0A54 /* LFXAllLightsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911EB18D037DF00AD0A54 /* LFXAllLightsCollection.m */; };
+		01A9122B18D037DF00AD0A54 /* LFXBinaryPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911ED18D037DF00AD0A54 /* LFXBinaryPath.m */; };
+		01A9122C18D037DF00AD0A54 /* LFXBinaryTargetID.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911EF18D037DF00AD0A54 /* LFXBinaryTargetID.m */; };
+		01A9122D18D037DF00AD0A54 /* LFXClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911F118D037DF00AD0A54 /* LFXClient.m */; };
+		01A9122E18D037DF00AD0A54 /* LFXDeviceMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911F318D037DF00AD0A54 /* LFXDeviceMapping.m */; };
+		01A9122F18D037DF00AD0A54 /* LFXGatewayConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911F518D037DF00AD0A54 /* LFXGatewayConnection.m */; };
+		01A9123018D037DF00AD0A54 /* LFXGatewayDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911F718D037DF00AD0A54 /* LFXGatewayDescriptor.m */; };
+		01A9123118D037DF00AD0A54 /* LFXGatewayDiscoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911F918D037DF00AD0A54 /* LFXGatewayDiscoveryController.m */; };
+		01A9123218D037DF00AD0A54 /* LFXGatewayDiscoveryTableEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911FB18D037DF00AD0A54 /* LFXGatewayDiscoveryTableEntry.m */; };
+		01A9123318D037DF00AD0A54 /* LFXHSBKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911FD18D037DF00AD0A54 /* LFXHSBKColor.m */; };
+		01A9123418D037DF00AD0A54 /* LFXLANTransportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A911FF18D037DF00AD0A54 /* LFXLANTransportManager.m */; };
+		01A9123518D037DF00AD0A54 /* LFXLight.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9120118D037DF00AD0A54 /* LFXLight.m */; };
+		01A9123618D037DF00AD0A54 /* LFXLightCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9120318D037DF00AD0A54 /* LFXLightCollection.m */; };
+		01A9123718D037DF00AD0A54 /* LFXMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9120518D037DF00AD0A54 /* LFXMessage.m */; };
+		01A9123818D037DF00AD0A54 /* LFXMessageObservationDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9120718D037DF00AD0A54 /* LFXMessageObservationDescriptor.m */; };
+		01A9123A18D037DF00AD0A54 /* LFXNetworkContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9120B18D037DF00AD0A54 /* LFXNetworkContext.m */; };
+		01A9123B18D037DF00AD0A54 /* LFXRoutingTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9120D18D037DF00AD0A54 /* LFXRoutingTable.m */; };
+		01A9123C18D037DF00AD0A54 /* LFXSiteID.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9120F18D037DF00AD0A54 /* LFXSiteID.m */; };
+		01A9123E18D037DF00AD0A54 /* LFXTaggedLightCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9121318D037DF00AD0A54 /* LFXTaggedLightCollection.m */; };
+		01A9123F18D037DF00AD0A54 /* LFXTagMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9121518D037DF00AD0A54 /* LFXTagMapping.m */; };
+		01A9124018D037DF00AD0A54 /* LFXTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9121718D037DF00AD0A54 /* LFXTarget.m */; };
+		01A9124118D037DF00AD0A54 /* LFXTCPGatewayConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9121918D037DF00AD0A54 /* LFXTCPGatewayConnection.m */; };
+		01A9124218D037DF00AD0A54 /* LFXTransportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9121B18D037DF00AD0A54 /* LFXTransportManager.m */; };
+		01A9124318D037DF00AD0A54 /* LFXTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9121D18D037DF00AD0A54 /* LFXTypes.m */; };
+		01A9124418D037DF00AD0A54 /* LFXUDPGatewayConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9121F18D037DF00AD0A54 /* LFXUDPGatewayConnection.m */; };
+		01A9124618D037DF00AD0A54 /* LXProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9122318D037DF00AD0A54 /* LXProtocol.m */; };
+		01A9124718D037DF00AD0A54 /* LXProtocolMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9122518D037DF00AD0A54 /* LXProtocolMessages.m */; };
+		01A9124818D037DF00AD0A54 /* LXProtocolTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9122718D037DF00AD0A54 /* LXProtocolTypes.m */; };
+		01A9124918D037DF00AD0A54 /* Structle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9122918D037DF00AD0A54 /* Structle.m */; };
+		01A9125418D039CD00AD0A54 /* LFXWiFiObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9125318D039CD00AD0A54 /* LFXWiFiObserver.m */; };
+		01A9127D18D03A5100AD0A54 /* NSArray+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9125818D03A5100AD0A54 /* NSArray+LFXExtensions.m */; };
+		01A9127E18D03A5100AD0A54 /* NSAttributedString+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9125A18D03A5100AD0A54 /* NSAttributedString+LFXExtensions.m */; };
+		01A9127F18D03A5100AD0A54 /* NSData+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9125C18D03A5100AD0A54 /* NSData+LFXExtensions.m */; };
+		01A9128018D03A5100AD0A54 /* NSDate+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9125E18D03A5100AD0A54 /* NSDate+LFXExtensions.m */; };
+		01A9128118D03A5100AD0A54 /* NSDateFormatter+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9126018D03A5100AD0A54 /* NSDateFormatter+LFXExtensions.m */; };
+		01A9128218D03A5100AD0A54 /* NSDecimalNumber+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9126218D03A5100AD0A54 /* NSDecimalNumber+LFXExtensions.m */; };
+		01A9128318D03A5100AD0A54 /* NSObject+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9126418D03A5100AD0A54 /* NSObject+LFXExtensions.m */; };
+		01A9128418D03A5100AD0A54 /* NSString+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9126618D03A5100AD0A54 /* NSString+LFXExtensions.m */; };
+		01A9128518D03A5100AD0A54 /* UIApplication+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9126818D03A5100AD0A54 /* UIApplication+LFXExtensions.m */; };
+		01A9128618D03A5100AD0A54 /* UIColor+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9126A18D03A5100AD0A54 /* UIColor+LFXExtensions.m */; };
+		01A9128718D03A5100AD0A54 /* UIDevice+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9126C18D03A5100AD0A54 /* UIDevice+LFXExtensions.m */; };
+		01A9128818D03A5100AD0A54 /* UIImage+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9126E18D03A5100AD0A54 /* UIImage+LFXExtensions.m */; };
+		01A9128918D03A5100AD0A54 /* UILabel+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9127018D03A5100AD0A54 /* UILabel+LFXExtensions.m */; };
+		01A9128A18D03A5100AD0A54 /* UITableView+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9127218D03A5100AD0A54 /* UITableView+LFXExtensions.m */; };
+		01A9128B18D03A5100AD0A54 /* UIView+LFXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9127418D03A5100AD0A54 /* UIView+LFXExtensions.m */; };
+		01A9128C18D03A5200AD0A54 /* LFXGCDFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9127718D03A5100AD0A54 /* LFXGCDFunctions.m */; };
+		01A9128D18D03A5200AD0A54 /* LFXRuntimeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9127918D03A5100AD0A54 /* LFXRuntimeFunctions.m */; };
+		01A9128E18D03A5200AD0A54 /* LFXMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9127C18D03A5100AD0A54 /* LFXMacros.m */; };
+		01A912E218D1558A00AD0A54 /* LIFXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A9124D18D0384F00AD0A54 /* LIFXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01A912E318D1559700AD0A54 /* LFXClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A911F018D037DF00AD0A54 /* LFXClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01A912E418D1559C00AD0A54 /* LFXAllLightsCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A911EA18D037DF00AD0A54 /* LFXAllLightsCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01A912E518D155AA00AD0A54 /* LFXHSBKColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A911FC18D037DF00AD0A54 /* LFXHSBKColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01A912E618D155F900AD0A54 /* LFXLight.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A9120018D037DF00AD0A54 /* LFXLight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01A912E718D155FE00AD0A54 /* LFXLightCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A9120218D037DF00AD0A54 /* LFXLightCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01A912E818D1560700AD0A54 /* LFXNetworkContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A9120A18D037DF00AD0A54 /* LFXNetworkContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01A912E918D1560E00AD0A54 /* LFXTaggedLightCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A9121218D037DF00AD0A54 /* LFXTaggedLightCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01A912F418D15E8700AD0A54 /* LFXSDKConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A912F318D15E8700AD0A54 /* LFXSDKConstants.m */; };
+		01F1805218DA9E660030CCF6 /* LFXClient+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F1805118DA9E590030CCF6 /* LFXClient+Private.h */; };
+		838ED00118D99824004F779C /* LFXTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A9121C18D037DF00AD0A54 /* LFXTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		01A9104B18D027B200AD0A54 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01162DCD18D87AE900A6AAA0 /* LFXObserverProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXObserverProxy.h; sourceTree = "<group>"; };
+		01162DCE18D87AE900A6AAA0 /* LFXObserverProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXObserverProxy.m; sourceTree = "<group>"; };
+		01162DD118D91ABC00A6AAA0 /* NSMethodSignature+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+LFXExtensions.h"; sourceTree = "<group>"; };
+		01162DD218D91ABC00A6AAA0 /* NSMethodSignature+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+LFXExtensions.m"; sourceTree = "<group>"; };
+		012B105418D69ED20075DE96 /* LFXExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFXExtensions.h; sourceTree = "<group>"; };
+		01406B5F18D2E19C00120AC2 /* LFXNetworkContext+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LFXNetworkContext+Private.h"; sourceTree = "<group>"; };
+		01406B6218D2E73600120AC2 /* LFXLight+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LFXLight+Private.h"; sourceTree = "<group>"; };
+		01406B6318D2E79100120AC2 /* LFXLightCollection+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LFXLightCollection+Private.h"; sourceTree = "<group>"; };
+		01406B6418D2E82F00120AC2 /* LFXTaggedLightCollection+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LFXTaggedLightCollection+Private.h"; sourceTree = "<group>"; };
+		01406B6518D2E91000120AC2 /* LFXBinaryTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXBinaryTypes.h; sourceTree = "<group>"; };
+		01406B6618D2E91000120AC2 /* LFXBinaryTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXBinaryTypes.m; sourceTree = "<group>"; };
+		01A9104D18D027B200AD0A54 /* libLIFXKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLIFXKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A9105018D027B200AD0A54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		01A9105418D027B200AD0A54 /* LIFXKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LIFXKit-Prefix.pch"; sourceTree = "<group>"; };
+		01A9105E18D027B200AD0A54 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		01A9106118D027B200AD0A54 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		01A9107A18D035A900AD0A54 /* Documentation.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Documentation.html; sourceTree = "<group>"; };
+		01A9107B18D035A900AD0A54 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		01A9107C18D035A900AD0A54 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		01A9107D18D035A900AD0A54 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		01A9107E18D035A900AD0A54 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		01A9115D18D035AA00AD0A54 /* AsyncSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		01A9115E18D035AA00AD0A54 /* AsyncSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		01A9115F18D035AA00AD0A54 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		01A9116018D035AA00AD0A54 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		01A9116118D035AA00AD0A54 /* Documentation.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Documentation.html; sourceTree = "<group>"; };
+		01A911A218D035AA00AD0A54 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		01A911A318D035AA00AD0A54 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		01A911A418D035AA00AD0A54 /* DDASLLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		01A911A518D035AA00AD0A54 /* DDASLLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		01A911A618D035AA00AD0A54 /* DDFileLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		01A911A718D035AA00AD0A54 /* DDFileLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		01A911A818D035AA00AD0A54 /* DDLog+LOGV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDLog+LOGV.h"; sourceTree = "<group>"; };
+		01A911A918D035AA00AD0A54 /* DDLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		01A911AA18D035AA00AD0A54 /* DDLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		01A911AB18D035AA00AD0A54 /* DDTTYLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		01A911AC18D035AA00AD0A54 /* DDTTYLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		01A911AE18D035AA00AD0A54 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		01A911AF18D035AA00AD0A54 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		01A911B018D035AA00AD0A54 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		01A911B118D035AA00AD0A54 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		01A911B218D035AA00AD0A54 /* DDMultiFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMultiFormatter.h; sourceTree = "<group>"; };
+		01A911B318D035AA00AD0A54 /* DDMultiFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDMultiFormatter.m; sourceTree = "<group>"; };
+		01A911B418D035AA00AD0A54 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		01A911EA18D037DF00AD0A54 /* LFXAllLightsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXAllLightsCollection.h; sourceTree = "<group>"; };
+		01A911EB18D037DF00AD0A54 /* LFXAllLightsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXAllLightsCollection.m; sourceTree = "<group>"; };
+		01A911EC18D037DF00AD0A54 /* LFXBinaryPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXBinaryPath.h; sourceTree = "<group>"; };
+		01A911ED18D037DF00AD0A54 /* LFXBinaryPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXBinaryPath.m; sourceTree = "<group>"; };
+		01A911EE18D037DF00AD0A54 /* LFXBinaryTargetID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXBinaryTargetID.h; sourceTree = "<group>"; };
+		01A911EF18D037DF00AD0A54 /* LFXBinaryTargetID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXBinaryTargetID.m; sourceTree = "<group>"; };
+		01A911F018D037DF00AD0A54 /* LFXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXClient.h; sourceTree = "<group>"; };
+		01A911F118D037DF00AD0A54 /* LFXClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXClient.m; sourceTree = "<group>"; };
+		01A911F218D037DF00AD0A54 /* LFXDeviceMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXDeviceMapping.h; sourceTree = "<group>"; };
+		01A911F318D037DF00AD0A54 /* LFXDeviceMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXDeviceMapping.m; sourceTree = "<group>"; };
+		01A911F418D037DF00AD0A54 /* LFXGatewayConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXGatewayConnection.h; sourceTree = "<group>"; };
+		01A911F518D037DF00AD0A54 /* LFXGatewayConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXGatewayConnection.m; sourceTree = "<group>"; };
+		01A911F618D037DF00AD0A54 /* LFXGatewayDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXGatewayDescriptor.h; sourceTree = "<group>"; };
+		01A911F718D037DF00AD0A54 /* LFXGatewayDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXGatewayDescriptor.m; sourceTree = "<group>"; };
+		01A911F818D037DF00AD0A54 /* LFXGatewayDiscoveryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXGatewayDiscoveryController.h; sourceTree = "<group>"; };
+		01A911F918D037DF00AD0A54 /* LFXGatewayDiscoveryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXGatewayDiscoveryController.m; sourceTree = "<group>"; };
+		01A911FA18D037DF00AD0A54 /* LFXGatewayDiscoveryTableEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXGatewayDiscoveryTableEntry.h; sourceTree = "<group>"; };
+		01A911FB18D037DF00AD0A54 /* LFXGatewayDiscoveryTableEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXGatewayDiscoveryTableEntry.m; sourceTree = "<group>"; };
+		01A911FC18D037DF00AD0A54 /* LFXHSBKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXHSBKColor.h; sourceTree = "<group>"; };
+		01A911FD18D037DF00AD0A54 /* LFXHSBKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXHSBKColor.m; sourceTree = "<group>"; };
+		01A911FE18D037DF00AD0A54 /* LFXLANTransportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXLANTransportManager.h; sourceTree = "<group>"; };
+		01A911FF18D037DF00AD0A54 /* LFXLANTransportManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXLANTransportManager.m; sourceTree = "<group>"; };
+		01A9120018D037DF00AD0A54 /* LFXLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXLight.h; sourceTree = "<group>"; };
+		01A9120118D037DF00AD0A54 /* LFXLight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXLight.m; sourceTree = "<group>"; };
+		01A9120218D037DF00AD0A54 /* LFXLightCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXLightCollection.h; sourceTree = "<group>"; };
+		01A9120318D037DF00AD0A54 /* LFXLightCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXLightCollection.m; sourceTree = "<group>"; };
+		01A9120418D037DF00AD0A54 /* LFXMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXMessage.h; sourceTree = "<group>"; };
+		01A9120518D037DF00AD0A54 /* LFXMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXMessage.m; sourceTree = "<group>"; };
+		01A9120618D037DF00AD0A54 /* LFXMessageObservationDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXMessageObservationDescriptor.h; sourceTree = "<group>"; };
+		01A9120718D037DF00AD0A54 /* LFXMessageObservationDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXMessageObservationDescriptor.m; sourceTree = "<group>"; };
+		01A9120A18D037DF00AD0A54 /* LFXNetworkContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXNetworkContext.h; sourceTree = "<group>"; };
+		01A9120B18D037DF00AD0A54 /* LFXNetworkContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXNetworkContext.m; sourceTree = "<group>"; };
+		01A9120C18D037DF00AD0A54 /* LFXRoutingTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXRoutingTable.h; sourceTree = "<group>"; };
+		01A9120D18D037DF00AD0A54 /* LFXRoutingTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXRoutingTable.m; sourceTree = "<group>"; };
+		01A9120E18D037DF00AD0A54 /* LFXSiteID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXSiteID.h; sourceTree = "<group>"; };
+		01A9120F18D037DF00AD0A54 /* LFXSiteID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXSiteID.m; sourceTree = "<group>"; };
+		01A9121218D037DF00AD0A54 /* LFXTaggedLightCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXTaggedLightCollection.h; sourceTree = "<group>"; };
+		01A9121318D037DF00AD0A54 /* LFXTaggedLightCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXTaggedLightCollection.m; sourceTree = "<group>"; };
+		01A9121418D037DF00AD0A54 /* LFXTagMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXTagMapping.h; sourceTree = "<group>"; };
+		01A9121518D037DF00AD0A54 /* LFXTagMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXTagMapping.m; sourceTree = "<group>"; };
+		01A9121618D037DF00AD0A54 /* LFXTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXTarget.h; sourceTree = "<group>"; };
+		01A9121718D037DF00AD0A54 /* LFXTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXTarget.m; sourceTree = "<group>"; };
+		01A9121818D037DF00AD0A54 /* LFXTCPGatewayConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXTCPGatewayConnection.h; sourceTree = "<group>"; };
+		01A9121918D037DF00AD0A54 /* LFXTCPGatewayConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXTCPGatewayConnection.m; sourceTree = "<group>"; };
+		01A9121A18D037DF00AD0A54 /* LFXTransportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXTransportManager.h; sourceTree = "<group>"; };
+		01A9121B18D037DF00AD0A54 /* LFXTransportManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXTransportManager.m; sourceTree = "<group>"; };
+		01A9121C18D037DF00AD0A54 /* LFXTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXTypes.h; sourceTree = "<group>"; };
+		01A9121D18D037DF00AD0A54 /* LFXTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXTypes.m; sourceTree = "<group>"; };
+		01A9121E18D037DF00AD0A54 /* LFXUDPGatewayConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXUDPGatewayConnection.h; sourceTree = "<group>"; };
+		01A9121F18D037DF00AD0A54 /* LFXUDPGatewayConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXUDPGatewayConnection.m; sourceTree = "<group>"; };
+		01A9122218D037DF00AD0A54 /* LXProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXProtocol.h; sourceTree = "<group>"; };
+		01A9122318D037DF00AD0A54 /* LXProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXProtocol.m; sourceTree = "<group>"; };
+		01A9122418D037DF00AD0A54 /* LXProtocolMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXProtocolMessages.h; sourceTree = "<group>"; };
+		01A9122518D037DF00AD0A54 /* LXProtocolMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXProtocolMessages.m; sourceTree = "<group>"; };
+		01A9122618D037DF00AD0A54 /* LXProtocolTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXProtocolTypes.h; sourceTree = "<group>"; };
+		01A9122718D037DF00AD0A54 /* LXProtocolTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXProtocolTypes.m; sourceTree = "<group>"; };
+		01A9122818D037DF00AD0A54 /* Structle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Structle.h; sourceTree = "<group>"; };
+		01A9122918D037DF00AD0A54 /* Structle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Structle.m; sourceTree = "<group>"; };
+		01A9124D18D0384F00AD0A54 /* LIFXKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LIFXKit.h; sourceTree = "<group>"; };
+		01A9125218D039CD00AD0A54 /* LFXWiFiObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXWiFiObserver.h; sourceTree = "<group>"; };
+		01A9125318D039CD00AD0A54 /* LFXWiFiObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXWiFiObserver.m; sourceTree = "<group>"; };
+		01A9125718D03A5100AD0A54 /* NSArray+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9125818D03A5100AD0A54 /* NSArray+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9125918D03A5100AD0A54 /* NSAttributedString+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9125A18D03A5100AD0A54 /* NSAttributedString+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9125B18D03A5100AD0A54 /* NSData+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9125C18D03A5100AD0A54 /* NSData+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9125D18D03A5100AD0A54 /* NSDate+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9125E18D03A5100AD0A54 /* NSDate+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9125F18D03A5100AD0A54 /* NSDateFormatter+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9126018D03A5100AD0A54 /* NSDateFormatter+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9126118D03A5100AD0A54 /* NSDecimalNumber+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9126218D03A5100AD0A54 /* NSDecimalNumber+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9126318D03A5100AD0A54 /* NSObject+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9126418D03A5100AD0A54 /* NSObject+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9126518D03A5100AD0A54 /* NSString+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9126618D03A5100AD0A54 /* NSString+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9126718D03A5100AD0A54 /* UIApplication+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9126818D03A5100AD0A54 /* UIApplication+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9126918D03A5100AD0A54 /* UIColor+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9126A18D03A5100AD0A54 /* UIColor+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9126B18D03A5100AD0A54 /* UIDevice+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9126C18D03A5100AD0A54 /* UIDevice+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9126D18D03A5100AD0A54 /* UIImage+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9126E18D03A5100AD0A54 /* UIImage+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9126F18D03A5100AD0A54 /* UILabel+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9127018D03A5100AD0A54 /* UILabel+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9127118D03A5100AD0A54 /* UITableView+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9127218D03A5100AD0A54 /* UITableView+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9127318D03A5100AD0A54 /* UIView+LFXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LFXExtensions.h"; sourceTree = "<group>"; };
+		01A9127418D03A5100AD0A54 /* UIView+LFXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LFXExtensions.m"; sourceTree = "<group>"; };
+		01A9127618D03A5100AD0A54 /* LFXGCDFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXGCDFunctions.h; sourceTree = "<group>"; };
+		01A9127718D03A5100AD0A54 /* LFXGCDFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXGCDFunctions.m; sourceTree = "<group>"; };
+		01A9127818D03A5100AD0A54 /* LFXRuntimeFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXRuntimeFunctions.h; sourceTree = "<group>"; };
+		01A9127918D03A5100AD0A54 /* LFXRuntimeFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXRuntimeFunctions.m; sourceTree = "<group>"; };
+		01A9127B18D03A5100AD0A54 /* LFXMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXMacros.h; sourceTree = "<group>"; };
+		01A9127C18D03A5100AD0A54 /* LFXMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXMacros.m; sourceTree = "<group>"; };
+		01A9128F18D03C0D00AD0A54 /* LFXSDKConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFXSDKConstants.h; sourceTree = "<group>"; };
+		01A912F318D15E8700AD0A54 /* LFXSDKConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXSDKConstants.m; sourceTree = "<group>"; };
+		01F1805118DA9E590030CCF6 /* LFXClient+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LFXClient+Private.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01A9104A18D027B200AD0A54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01A9105118D027B200AD0A54 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01406B5318D2DCE400120AC2 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				01A911F018D037DF00AD0A54 /* LFXClient.h */,
+				01A911F118D037DF00AD0A54 /* LFXClient.m */,
+				01F1805018DA9E4D0030CCF6 /* Private */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		01406B5418D2DCF000120AC2 /* Network Context */ = {
+			isa = PBXGroup;
+			children = (
+				01A9120A18D037DF00AD0A54 /* LFXNetworkContext.h */,
+				01A9120B18D037DF00AD0A54 /* LFXNetworkContext.m */,
+				01406B6018D2E2CE00120AC2 /* Private */,
+			);
+			name = "Network Context";
+			sourceTree = "<group>";
+		};
+		01406B5518D2DD0600120AC2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				01A9121C18D037DF00AD0A54 /* LFXTypes.h */,
+				01A9121D18D037DF00AD0A54 /* LFXTypes.m */,
+				01A911FC18D037DF00AD0A54 /* LFXHSBKColor.h */,
+				01A911FD18D037DF00AD0A54 /* LFXHSBKColor.m */,
+				01406B5618D2DD1100120AC2 /* Private */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		01406B5618D2DD1100120AC2 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				01406B6518D2E91000120AC2 /* LFXBinaryTypes.h */,
+				01406B6618D2E91000120AC2 /* LFXBinaryTypes.m */,
+				01A911F618D037DF00AD0A54 /* LFXGatewayDescriptor.h */,
+				01A911F718D037DF00AD0A54 /* LFXGatewayDescriptor.m */,
+				01A9120E18D037DF00AD0A54 /* LFXSiteID.h */,
+				01A9120F18D037DF00AD0A54 /* LFXSiteID.m */,
+				01A911EE18D037DF00AD0A54 /* LFXBinaryTargetID.h */,
+				01A911EF18D037DF00AD0A54 /* LFXBinaryTargetID.m */,
+				01A911EC18D037DF00AD0A54 /* LFXBinaryPath.h */,
+				01A911ED18D037DF00AD0A54 /* LFXBinaryPath.m */,
+				01A9121418D037DF00AD0A54 /* LFXTagMapping.h */,
+				01A9121518D037DF00AD0A54 /* LFXTagMapping.m */,
+				01A911F218D037DF00AD0A54 /* LFXDeviceMapping.h */,
+				01A911F318D037DF00AD0A54 /* LFXDeviceMapping.m */,
+				01A9120418D037DF00AD0A54 /* LFXMessage.h */,
+				01A9120518D037DF00AD0A54 /* LFXMessage.m */,
+				01A9122218D037DF00AD0A54 /* LXProtocol.h */,
+				01A9122318D037DF00AD0A54 /* LXProtocol.m */,
+				01A9122418D037DF00AD0A54 /* LXProtocolMessages.h */,
+				01A9122518D037DF00AD0A54 /* LXProtocolMessages.m */,
+				01A9122618D037DF00AD0A54 /* LXProtocolTypes.h */,
+				01A9122718D037DF00AD0A54 /* LXProtocolTypes.m */,
+				01A9122818D037DF00AD0A54 /* Structle.h */,
+				01A9122918D037DF00AD0A54 /* Structle.m */,
+				01A9121618D037DF00AD0A54 /* LFXTarget.h */,
+				01A9121718D037DF00AD0A54 /* LFXTarget.m */,
+				01A9120618D037DF00AD0A54 /* LFXMessageObservationDescriptor.h */,
+				01A9120718D037DF00AD0A54 /* LFXMessageObservationDescriptor.m */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		01406B5718D2DD2300120AC2 /* Lights and Light Collections */ = {
+			isa = PBXGroup;
+			children = (
+				01A9120018D037DF00AD0A54 /* LFXLight.h */,
+				01A9120118D037DF00AD0A54 /* LFXLight.m */,
+				01A9120218D037DF00AD0A54 /* LFXLightCollection.h */,
+				01A9120318D037DF00AD0A54 /* LFXLightCollection.m */,
+				01A9121218D037DF00AD0A54 /* LFXTaggedLightCollection.h */,
+				01A9121318D037DF00AD0A54 /* LFXTaggedLightCollection.m */,
+				01406B6118D2E72600120AC2 /* Private */,
+			);
+			name = "Lights and Light Collections";
+			sourceTree = "<group>";
+		};
+		01406B5818D2DEF800120AC2 /* Transport Manager */ = {
+			isa = PBXGroup;
+			children = (
+				01A9121A18D037DF00AD0A54 /* LFXTransportManager.h */,
+				01A9121B18D037DF00AD0A54 /* LFXTransportManager.m */,
+				01406B5B18D2DF5B00120AC2 /* Gateway Connection */,
+				01406B5C18D2DF6B00120AC2 /* LAN */,
+			);
+			name = "Transport Manager";
+			sourceTree = "<group>";
+		};
+		01406B5918D2DF0B00120AC2 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				01A9128F18D03C0D00AD0A54 /* LFXSDKConstants.h */,
+				01A912F318D15E8700AD0A54 /* LFXSDKConstants.m */,
+				01A9125218D039CD00AD0A54 /* LFXWiFiObserver.h */,
+				01A9125318D039CD00AD0A54 /* LFXWiFiObserver.m */,
+				01162DCD18D87AE900A6AAA0 /* LFXObserverProxy.h */,
+				01162DCE18D87AE900A6AAA0 /* LFXObserverProxy.m */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		01406B5B18D2DF5B00120AC2 /* Gateway Connection */ = {
+			isa = PBXGroup;
+			children = (
+				01A911F418D037DF00AD0A54 /* LFXGatewayConnection.h */,
+				01A911F518D037DF00AD0A54 /* LFXGatewayConnection.m */,
+				01A9121818D037DF00AD0A54 /* LFXTCPGatewayConnection.h */,
+				01A9121918D037DF00AD0A54 /* LFXTCPGatewayConnection.m */,
+				01A9121E18D037DF00AD0A54 /* LFXUDPGatewayConnection.h */,
+				01A9121F18D037DF00AD0A54 /* LFXUDPGatewayConnection.m */,
+			);
+			name = "Gateway Connection";
+			sourceTree = "<group>";
+		};
+		01406B5C18D2DF6B00120AC2 /* LAN */ = {
+			isa = PBXGroup;
+			children = (
+				01A911FE18D037DF00AD0A54 /* LFXLANTransportManager.h */,
+				01A911FF18D037DF00AD0A54 /* LFXLANTransportManager.m */,
+				01406B5D18D2DF8500120AC2 /* Gateway Discovery */,
+			);
+			name = LAN;
+			sourceTree = "<group>";
+		};
+		01406B5D18D2DF8500120AC2 /* Gateway Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				01A911F818D037DF00AD0A54 /* LFXGatewayDiscoveryController.h */,
+				01A911F918D037DF00AD0A54 /* LFXGatewayDiscoveryController.m */,
+				01A911FA18D037DF00AD0A54 /* LFXGatewayDiscoveryTableEntry.h */,
+				01A911FB18D037DF00AD0A54 /* LFXGatewayDiscoveryTableEntry.m */,
+			);
+			name = "Gateway Discovery";
+			sourceTree = "<group>";
+		};
+		01406B5E18D2E0BE00120AC2 /* Routing Table */ = {
+			isa = PBXGroup;
+			children = (
+				01A9120C18D037DF00AD0A54 /* LFXRoutingTable.h */,
+				01A9120D18D037DF00AD0A54 /* LFXRoutingTable.m */,
+			);
+			name = "Routing Table";
+			sourceTree = "<group>";
+		};
+		01406B6018D2E2CE00120AC2 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				01406B5F18D2E19C00120AC2 /* LFXNetworkContext+Private.h */,
+				01406B5818D2DEF800120AC2 /* Transport Manager */,
+				01406B5E18D2E0BE00120AC2 /* Routing Table */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		01406B6118D2E72600120AC2 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				01A911EA18D037DF00AD0A54 /* LFXAllLightsCollection.h */,
+				01A911EB18D037DF00AD0A54 /* LFXAllLightsCollection.m */,
+				01406B6218D2E73600120AC2 /* LFXLight+Private.h */,
+				01406B6318D2E79100120AC2 /* LFXLightCollection+Private.h */,
+				01406B6418D2E82F00120AC2 /* LFXTaggedLightCollection+Private.h */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		01A9104418D027B200AD0A54 = {
+			isa = PBXGroup;
+			children = (
+				01A9124D18D0384F00AD0A54 /* LIFXKit.h */,
+				01A9105218D027B200AD0A54 /* Classes */,
+				01A9125518D03A5100AD0A54 /* Extensions */,
+				01A9105318D027B200AD0A54 /* Supporting Files */,
+				01A9107618D0359D00AD0A54 /* Libraries */,
+				01A9104F18D027B200AD0A54 /* Frameworks */,
+				01A9104E18D027B200AD0A54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01A9104E18D027B200AD0A54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01A9104D18D027B200AD0A54 /* libLIFXKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01A9104F18D027B200AD0A54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01A9105018D027B200AD0A54 /* Foundation.framework */,
+				01A9105E18D027B200AD0A54 /* XCTest.framework */,
+				01A9106118D027B200AD0A54 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01A9105218D027B200AD0A54 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				01406B5318D2DCE400120AC2 /* Client */,
+				01406B5418D2DCF000120AC2 /* Network Context */,
+				01406B5718D2DD2300120AC2 /* Lights and Light Collections */,
+				01406B5518D2DD0600120AC2 /* Entities */,
+				01406B5918D2DF0B00120AC2 /* Private */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		01A9105318D027B200AD0A54 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01A9105418D027B200AD0A54 /* LIFXKit-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01A9107618D0359D00AD0A54 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				01A9107718D035A900AD0A54 /* CocoaAsyncSocket */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		01A9107718D035A900AD0A54 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				01A9107918D035A900AD0A54 /* GCD */,
+				01A9115C18D035AA00AD0A54 /* RunLoop */,
+				01A911A018D035AA00AD0A54 /* Vendor */,
+			);
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		01A9107918D035A900AD0A54 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				01A9107A18D035A900AD0A54 /* Documentation.html */,
+				01A9107B18D035A900AD0A54 /* GCDAsyncSocket.h */,
+				01A9107C18D035A900AD0A54 /* GCDAsyncSocket.m */,
+				01A9107D18D035A900AD0A54 /* GCDAsyncUdpSocket.h */,
+				01A9107E18D035A900AD0A54 /* GCDAsyncUdpSocket.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		01A9115C18D035AA00AD0A54 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				01A9115D18D035AA00AD0A54 /* AsyncSocket.h */,
+				01A9115E18D035AA00AD0A54 /* AsyncSocket.m */,
+				01A9115F18D035AA00AD0A54 /* AsyncUdpSocket.h */,
+				01A9116018D035AA00AD0A54 /* AsyncUdpSocket.m */,
+				01A9116118D035AA00AD0A54 /* Documentation.html */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		01A911A018D035AA00AD0A54 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				01A911A118D035AA00AD0A54 /* CocoaLumberjack */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		01A911A118D035AA00AD0A54 /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				01A911A218D035AA00AD0A54 /* DDAbstractDatabaseLogger.h */,
+				01A911A318D035AA00AD0A54 /* DDAbstractDatabaseLogger.m */,
+				01A911A418D035AA00AD0A54 /* DDASLLogger.h */,
+				01A911A518D035AA00AD0A54 /* DDASLLogger.m */,
+				01A911A618D035AA00AD0A54 /* DDFileLogger.h */,
+				01A911A718D035AA00AD0A54 /* DDFileLogger.m */,
+				01A911A818D035AA00AD0A54 /* DDLog+LOGV.h */,
+				01A911A918D035AA00AD0A54 /* DDLog.h */,
+				01A911AA18D035AA00AD0A54 /* DDLog.m */,
+				01A911AB18D035AA00AD0A54 /* DDTTYLogger.h */,
+				01A911AC18D035AA00AD0A54 /* DDTTYLogger.m */,
+				01A911AD18D035AA00AD0A54 /* Extensions */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		01A911AD18D035AA00AD0A54 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				01A911AE18D035AA00AD0A54 /* DDContextFilterLogFormatter.h */,
+				01A911AF18D035AA00AD0A54 /* DDContextFilterLogFormatter.m */,
+				01A911B018D035AA00AD0A54 /* DDDispatchQueueLogFormatter.h */,
+				01A911B118D035AA00AD0A54 /* DDDispatchQueueLogFormatter.m */,
+				01A911B218D035AA00AD0A54 /* DDMultiFormatter.h */,
+				01A911B318D035AA00AD0A54 /* DDMultiFormatter.m */,
+				01A911B418D035AA00AD0A54 /* README.txt */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		01A9125518D03A5100AD0A54 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				012B105418D69ED20075DE96 /* LFXExtensions.h */,
+				01A9125618D03A5100AD0A54 /* Categories */,
+				01A9127518D03A5100AD0A54 /* Functions */,
+				01A9127A18D03A5100AD0A54 /* Macros */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		01A9125618D03A5100AD0A54 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				01A9125718D03A5100AD0A54 /* NSArray+LFXExtensions.h */,
+				01A9125818D03A5100AD0A54 /* NSArray+LFXExtensions.m */,
+				01A9125918D03A5100AD0A54 /* NSAttributedString+LFXExtensions.h */,
+				01A9125A18D03A5100AD0A54 /* NSAttributedString+LFXExtensions.m */,
+				01A9125B18D03A5100AD0A54 /* NSData+LFXExtensions.h */,
+				01A9125C18D03A5100AD0A54 /* NSData+LFXExtensions.m */,
+				01A9125D18D03A5100AD0A54 /* NSDate+LFXExtensions.h */,
+				01A9125E18D03A5100AD0A54 /* NSDate+LFXExtensions.m */,
+				01A9125F18D03A5100AD0A54 /* NSDateFormatter+LFXExtensions.h */,
+				01A9126018D03A5100AD0A54 /* NSDateFormatter+LFXExtensions.m */,
+				01A9126118D03A5100AD0A54 /* NSDecimalNumber+LFXExtensions.h */,
+				01A9126218D03A5100AD0A54 /* NSDecimalNumber+LFXExtensions.m */,
+				01A9126318D03A5100AD0A54 /* NSObject+LFXExtensions.h */,
+				01A9126418D03A5100AD0A54 /* NSObject+LFXExtensions.m */,
+				01A9126518D03A5100AD0A54 /* NSString+LFXExtensions.h */,
+				01A9126618D03A5100AD0A54 /* NSString+LFXExtensions.m */,
+				01A9126718D03A5100AD0A54 /* UIApplication+LFXExtensions.h */,
+				01A9126818D03A5100AD0A54 /* UIApplication+LFXExtensions.m */,
+				01A9126918D03A5100AD0A54 /* UIColor+LFXExtensions.h */,
+				01A9126A18D03A5100AD0A54 /* UIColor+LFXExtensions.m */,
+				01A9126B18D03A5100AD0A54 /* UIDevice+LFXExtensions.h */,
+				01A9126C18D03A5100AD0A54 /* UIDevice+LFXExtensions.m */,
+				01A9126D18D03A5100AD0A54 /* UIImage+LFXExtensions.h */,
+				01A9126E18D03A5100AD0A54 /* UIImage+LFXExtensions.m */,
+				01A9126F18D03A5100AD0A54 /* UILabel+LFXExtensions.h */,
+				01A9127018D03A5100AD0A54 /* UILabel+LFXExtensions.m */,
+				01A9127118D03A5100AD0A54 /* UITableView+LFXExtensions.h */,
+				01A9127218D03A5100AD0A54 /* UITableView+LFXExtensions.m */,
+				01A9127318D03A5100AD0A54 /* UIView+LFXExtensions.h */,
+				01A9127418D03A5100AD0A54 /* UIView+LFXExtensions.m */,
+				01162DD118D91ABC00A6AAA0 /* NSMethodSignature+LFXExtensions.h */,
+				01162DD218D91ABC00A6AAA0 /* NSMethodSignature+LFXExtensions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		01A9127518D03A5100AD0A54 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				01A9127618D03A5100AD0A54 /* LFXGCDFunctions.h */,
+				01A9127718D03A5100AD0A54 /* LFXGCDFunctions.m */,
+				01A9127818D03A5100AD0A54 /* LFXRuntimeFunctions.h */,
+				01A9127918D03A5100AD0A54 /* LFXRuntimeFunctions.m */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		01A9127A18D03A5100AD0A54 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				01A9127B18D03A5100AD0A54 /* LFXMacros.h */,
+				01A9127C18D03A5100AD0A54 /* LFXMacros.m */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		01F1805018DA9E4D0030CCF6 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				01F1805118DA9E590030CCF6 /* LFXClient+Private.h */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		01A912E118D1558500AD0A54 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01162DCF18D87AE900A6AAA0 /* LFXObserverProxy.h in Headers */,
+				01F1805218DA9E660030CCF6 /* LFXClient+Private.h in Headers */,
+				01A912E318D1559700AD0A54 /* LFXClient.h in Headers */,
+				01A912E518D155AA00AD0A54 /* LFXHSBKColor.h in Headers */,
+				01A912E918D1560E00AD0A54 /* LFXTaggedLightCollection.h in Headers */,
+				01A912E418D1559C00AD0A54 /* LFXAllLightsCollection.h in Headers */,
+				01A912E618D155F900AD0A54 /* LFXLight.h in Headers */,
+				01406B6718D2E91000120AC2 /* LFXBinaryTypes.h in Headers */,
+				838ED00118D99824004F779C /* LFXTypes.h in Headers */,
+				01A912E818D1560700AD0A54 /* LFXNetworkContext.h in Headers */,
+				01A912E718D155FE00AD0A54 /* LFXLightCollection.h in Headers */,
+				01A912E218D1558A00AD0A54 /* LIFXKit.h in Headers */,
+				01162DD318D91ABC00A6AAA0 /* NSMethodSignature+LFXExtensions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		01A9104C18D027B200AD0A54 /* LIFXKit Static Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01A9107018D027B200AD0A54 /* Build configuration list for PBXNativeTarget "LIFXKit Static Library" */;
+			buildPhases = (
+				01A9104918D027B200AD0A54 /* Sources */,
+				01A9104A18D027B200AD0A54 /* Frameworks */,
+				01A9104B18D027B200AD0A54 /* CopyFiles */,
+				01A912E118D1558500AD0A54 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LIFXKit Static Library";
+			productName = "LIFX Static Library";
+			productReference = 01A9104D18D027B200AD0A54 /* libLIFXKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01A9104518D027B200AD0A54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LFX;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "LIFX Labs";
+			};
+			buildConfigurationList = 01A9104818D027B200AD0A54 /* Build configuration list for PBXProject "LIFXKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 01A9104418D027B200AD0A54;
+			productRefGroup = 01A9104E18D027B200AD0A54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01A9104C18D027B200AD0A54 /* LIFXKit Static Library */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01A9104918D027B200AD0A54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01A9123218D037DF00AD0A54 /* LFXGatewayDiscoveryTableEntry.m in Sources */,
+				01A9128A18D03A5100AD0A54 /* UITableView+LFXExtensions.m in Sources */,
+				01A9123118D037DF00AD0A54 /* LFXGatewayDiscoveryController.m in Sources */,
+				01A9123418D037DF00AD0A54 /* LFXLANTransportManager.m in Sources */,
+				01A9128418D03A5100AD0A54 /* NSString+LFXExtensions.m in Sources */,
+				01A9123818D037DF00AD0A54 /* LFXMessageObservationDescriptor.m in Sources */,
+				01A9123F18D037DF00AD0A54 /* LFXTagMapping.m in Sources */,
+				01A9124118D037DF00AD0A54 /* LFXTCPGatewayConnection.m in Sources */,
+				01A9127F18D03A5100AD0A54 /* NSData+LFXExtensions.m in Sources */,
+				01A9128818D03A5100AD0A54 /* UIImage+LFXExtensions.m in Sources */,
+				01A9123518D037DF00AD0A54 /* LFXLight.m in Sources */,
+				01A9124418D037DF00AD0A54 /* LFXUDPGatewayConnection.m in Sources */,
+				01A9124018D037DF00AD0A54 /* LFXTarget.m in Sources */,
+				01162DD018D87AE900A6AAA0 /* LFXObserverProxy.m in Sources */,
+				01162DD418D91ABC00A6AAA0 /* NSMethodSignature+LFXExtensions.m in Sources */,
+				01A9125418D039CD00AD0A54 /* LFXWiFiObserver.m in Sources */,
+				01A9127D18D03A5100AD0A54 /* NSArray+LFXExtensions.m in Sources */,
+				01A9128C18D03A5200AD0A54 /* LFXGCDFunctions.m in Sources */,
+				01406B6818D2E91000120AC2 /* LFXBinaryTypes.m in Sources */,
+				01A9124818D037DF00AD0A54 /* LXProtocolTypes.m in Sources */,
+				01A9127E18D03A5100AD0A54 /* NSAttributedString+LFXExtensions.m in Sources */,
+				01A9128318D03A5100AD0A54 /* NSObject+LFXExtensions.m in Sources */,
+				01A9124218D037DF00AD0A54 /* LFXTransportManager.m in Sources */,
+				01A9128D18D03A5200AD0A54 /* LFXRuntimeFunctions.m in Sources */,
+				01A9123B18D037DF00AD0A54 /* LFXRoutingTable.m in Sources */,
+				01A9128B18D03A5100AD0A54 /* UIView+LFXExtensions.m in Sources */,
+				01A9123C18D037DF00AD0A54 /* LFXSiteID.m in Sources */,
+				01A911E818D035BF00AD0A54 /* GCDAsyncSocket.m in Sources */,
+				01A911E918D035C100AD0A54 /* GCDAsyncUdpSocket.m in Sources */,
+				01A9123718D037DF00AD0A54 /* LFXMessage.m in Sources */,
+				01A9124918D037DF00AD0A54 /* Structle.m in Sources */,
+				01A9123A18D037DF00AD0A54 /* LFXNetworkContext.m in Sources */,
+				01A9122B18D037DF00AD0A54 /* LFXBinaryPath.m in Sources */,
+				01A9122D18D037DF00AD0A54 /* LFXClient.m in Sources */,
+				01A9123E18D037DF00AD0A54 /* LFXTaggedLightCollection.m in Sources */,
+				01A9124318D037DF00AD0A54 /* LFXTypes.m in Sources */,
+				01406B4618D2AC9C00120AC2 /* DDLog.m in Sources */,
+				01A9123618D037DF00AD0A54 /* LFXLightCollection.m in Sources */,
+				01A9123318D037DF00AD0A54 /* LFXHSBKColor.m in Sources */,
+				01A9124618D037DF00AD0A54 /* LXProtocol.m in Sources */,
+				01A9122C18D037DF00AD0A54 /* LFXBinaryTargetID.m in Sources */,
+				01A912F418D15E8700AD0A54 /* LFXSDKConstants.m in Sources */,
+				01A9128E18D03A5200AD0A54 /* LFXMacros.m in Sources */,
+				01A9128618D03A5100AD0A54 /* UIColor+LFXExtensions.m in Sources */,
+				01A9128918D03A5100AD0A54 /* UILabel+LFXExtensions.m in Sources */,
+				01A9128718D03A5100AD0A54 /* UIDevice+LFXExtensions.m in Sources */,
+				01A9128518D03A5100AD0A54 /* UIApplication+LFXExtensions.m in Sources */,
+				01A9128018D03A5100AD0A54 /* NSDate+LFXExtensions.m in Sources */,
+				01A9128118D03A5100AD0A54 /* NSDateFormatter+LFXExtensions.m in Sources */,
+				01A9122F18D037DF00AD0A54 /* LFXGatewayConnection.m in Sources */,
+				01A9123018D037DF00AD0A54 /* LFXGatewayDescriptor.m in Sources */,
+				01A9124718D037DF00AD0A54 /* LXProtocolMessages.m in Sources */,
+				01A9122E18D037DF00AD0A54 /* LFXDeviceMapping.m in Sources */,
+				01A9122A18D037DF00AD0A54 /* LFXAllLightsCollection.m in Sources */,
+				01A9128218D03A5100AD0A54 /* NSDecimalNumber+LFXExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		01A9106E18D027B200AD0A54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		01A9106F18D027B200AD0A54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01A9107118D027B200AD0A54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/LIFX_SDK_Obj_C.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Supporting Files/LIFXKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = LIFXKit;
+				PUBLIC_HEADERS_FOLDER_PATH = include/LIFXKit;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		01A9107218D027B200AD0A54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/LIFX_SDK_Obj_C.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Supporting Files/LIFXKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = LIFXKit;
+				PUBLIC_HEADERS_FOLDER_PATH = include/LIFXKit;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01A9104818D027B200AD0A54 /* Build configuration list for PBXProject "LIFXKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01A9106E18D027B200AD0A54 /* Debug */,
+				01A9106F18D027B200AD0A54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01A9107018D027B200AD0A54 /* Build configuration list for PBXNativeTarget "LIFXKit Static Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01A9107118D027B200AD0A54 /* Debug */,
+				01A9107218D027B200AD0A54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01A9104518D027B200AD0A54 /* Project object */;
+}
