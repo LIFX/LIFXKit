@@ -57,6 +57,8 @@ Sample code can be found in `/Examples`.
 ### LIFX Browser
 The `LIFX Browser` sample code project gives a very simple demonstration of discovery, lights, tagged light collections, light state and light control. It also shows how to integrate with the observer-callback APIs used throught LIFXKit. This is the best starting point for writing your own LIFX-compatible app.
 
+## Public vs Private Headers and Classes
+Any source in a group named "Private" in the Xcode source list should be considered non-public API, and may be changed at any time, without warning.
 
 ## Quick overview of LIFX SDK terminology
 
