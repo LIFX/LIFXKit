@@ -10,7 +10,7 @@ LIFXKit will be published in the public CocoaPod Specs repo shortly. Until then,
 	pod 'LIFXKit', :git => 'https://github.com/LIFX/LIFXKit.git', :tag => 'v0.5'
 
 ### Xcode Sub-Project Installation
-1. Drag `LIFX SDK.xcodeproj` into your Xcode project as a sub-project. Go to the Products source group within LIFX SDK, then drag `libLIFXKit.a` into your App Target's Linked Frameworks and Libraries list.
+1. Drag `LIFXKit.xcodeproj` into your Xcode project as a sub-project. Go to the Products source group within the LIFXKit sub-project, then drag `libLIFXKit.a` into your App Target's Linked Frameworks and Libraries list.
 2. Configure your Target to link against the follow system Frameworks/Libraries:
 	- `SystemConfiguration.framework`
 	- `libz.dylib`
@@ -57,6 +57,8 @@ Sample code can be found in `/Examples`.
 ### LIFX Browser
 The `LIFX Browser` sample code project gives a very simple demonstration of discovery, lights, tagged light collections, light state and light control. It also shows how to integrate with the observer-callback APIs used throught LIFXKit. This is the best starting point for writing your own LIFX-compatible app.
 
+## Public vs Private Headers and Classes
+Any source in a group named "Private" in the Xcode source list should be considered non-public API, and may be changed at any time, without warning.
 
 ## Quick overview of LIFX SDK terminology
 
