@@ -5,16 +5,19 @@ LIFXKit is the LIFX SDK for Objective-C. LIFXKit currently supports iOS. OS X su
 ## Installation
 
 ### CocoaPods Installation
-LIFXKit will be published in the public CocoaPod Specs repo shortly. Until then, you can use LIFXKit with CocoaPods by add the following to your Podfile:
+To use LIFXKit with CocoaPods, simply add the following to your Podfile:
 
-	pod 'LIFXKit', :git => 'https://github.com/LIFX/LIFXKit.git', :tag => 'v0.5'
+```ruby
+pod 'LIFXKit'
+```
 
 ### Xcode Sub-Project Installation
-1. Drag `LIFXKit.xcodeproj` into your Xcode project as a sub-project. Go to the Products source group within the LIFXKit sub-project, then drag `libLIFXKit.a` into your App Target's Linked Frameworks and Libraries list.
-2. Configure your Target to link against the follow system Frameworks/Libraries:
+1. Drag `LIFXKit.xcodeproj` into your Xcode project as a sub-project.
+2. Go to the Products source group within the LIFXKit sub-project then drag `libLIFXKit.a` into your App Target's Linked Frameworks and Libraries list.
+3. Configure your App Target to link against the follow system Frameworks/Libraries:
 	- `SystemConfiguration.framework`
 	- `libz.dylib`
-3. Ensure that your target is configured to link against categories from static libraries correctly. To do this, ensure that the `Other Linker Flags` Build Settings for your app target contains `-ObjC`.
+4. Ensure that your target is configured to link against categories from static libraries correctly. To do this, ensure that the `Other Linker Flags` Build Settings for your app target contains `-ObjC`.
 
 Once you've configured your Xcode project with either method, add `#import <LIFXKit/LIFXKit.h>` to your source files and start hacking away!
 
