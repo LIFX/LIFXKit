@@ -10,7 +10,7 @@ LIFXKit will be published in the public CocoaPod Specs repo shortly. Until then,
 	pod 'LIFXKit', :git => 'https://github.com/LIFX/LIFXKit.git', :tag => 'v0.5'
 
 ### Xcode Sub-Project Installation
-1. Drag `LIFX SDK.xcodeproj` into your Xcode project as a sub-project. Go to the Products source group within LIFX SDK, then drag `libLIFXKit.a` into your App Target's Linked Frameworks and Libraries list.
+1. Drag `LIFXKit.xcodeproj` into your Xcode project as a sub-project. Go to the Products source group within the LIFXKit sub-project, then drag `libLIFXKit.a` into your App Target's Linked Frameworks and Libraries list.
 2. Configure your Target to link against the follow system Frameworks/Libraries:
 	- `SystemConfiguration.framework`
 	- `libz.dylib`
