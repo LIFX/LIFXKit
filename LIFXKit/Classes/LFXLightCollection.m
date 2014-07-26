@@ -146,7 +146,7 @@
 
 - (void)removeLightCollectionObserver:(id <LFXLightCollectionObserver>)observer
 {
-	[self.lightCollectionObserverProxy addObserver:observer];
+	[self.lightCollectionObserverProxy removeObserver:observer];
 }
 
 #pragma mark - LFXLightObserver
