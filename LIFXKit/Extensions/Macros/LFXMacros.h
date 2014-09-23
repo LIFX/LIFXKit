@@ -7,34 +7,31 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DDLog.h"
 
 
 // Logging
 
+extern int LFXLogLevel;
 
-// (from DDLog.h)
-//	#define LOG_FLAG_ERROR    (1 << 0)  // 0...00001
-//	#define LOG_FLAG_WARN     (1 << 1)  // 0...00010
-//	#define LOG_FLAG_INFO     (1 << 2)  // 0...00100
-//	#define LOG_FLAG_DEBUG    (1 << 3)  // 0...01000
-//	#define LOG_FLAG_VERBOSE  (1 << 4)  // 0...10000
-
-
-
-#ifdef DEBUG
-static const int ddLogLevel = LOG_LEVEL_INFO;
-#else
-static const int ddLogLevel = LOG_LEVEL_INFO;
-#endif
+#define LFXLogLevelVerbose	4
+#define LFXLogLevelInfo		3
+#define LFXLogLevelWarn		2
+#define LFXLogLevelError	1
+#define LFXLogLevelNone		0
 
 
-#define LFXLogVerbose(...)	DDLogVerbose(__VA_ARGS__)
-#define LFXLogInfo(...)	DDLogInfo(__VA_ARGS__)
-#define LFXLogWarn(...)	DDLogWarn(__VA_ARGS__)
-#define LFXLogError(...)	DDLogError(__VA_ARGS__)
+#define LFXLogVerbose(...)	LFXLog(LFXLogLevelVerbose, __VA_ARGS__)
+#define LFXLogInfo(...)		LFXLog(LFXLogLevelInfo, __VA_ARGS__)
+#define LFXLogWarn(...)		LFXLog(LFXLogLevelWarn, __VA_ARGS__)
+#define LFXLogError(...)	LFXLog(LFXLogLevelError, __VA_ARGS__)
 
-#define LFXLogImplementMethod() DDLogError(@"Implement me: %s", __PRETTY_FUNCTION__)
+
+#define LFXLog(level, ...)	do { if (level <= LFXLogLevel) NSLog(__VA_ARGS__); } while (0)
+
+
+// This can be put into methods that should be overriden (without calling super) to throw
+// a warning at runtime
+#define LFXLogImplementMethod() LFXLogError(@"Implement me: %s", __PRETTY_FUNCTION__)
 
 
 // KVC Compile-time Helpers

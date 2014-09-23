@@ -1,0 +1,7 @@
+//
+//  LIFX SDK Obj-C
+//  Copyright (c) 2014 LIFX Labs. All rights reserved.
+//
+
+LIFXKIT_VERSION = 0.6.0
+LIFXKIT_BUILD_NUMBER = 10

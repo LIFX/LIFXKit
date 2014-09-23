@@ -55,27 +55,31 @@
 
 - (void)updateViewForLight
 {
+	self.title = @"Light";
+	
 	LFXLight *light = self.detailItem;
 	
 	NSMutableString *string = [NSMutableString new];
 	
-	[string appendFormat:@"Light\n"];
-	[string appendFormat:@"Label = %@\n", light.label];
+	[string appendFormat:@"Label = '%@'\n", light.label];
 	[string appendFormat:@"DeviceID = %@\n", light.deviceID];
 	[string appendFormat:@"Power State = %@\n", NSStringFromLFXPowerState(light.powerState)];
 	[string appendFormat:@"Color = %@\n", light.color.stringValue];
+	[string appendFormat:@"Mesh FW = %@\n", light.meshFirmwareVersion];
+	[string appendFormat:@"Wifi FW = %@\n", light.wifiFirmwareVersion];
 	
 	self.detailDescriptionLabel.text = string;
 }
 
 - (void)updateViewForLightCollection
 {
-	LFXTaggedLightCollection *taggedLightCollection = self.detailItem;
+	self.title = @"Tagged Light Collection";
+	
+	LFXTaggedLightCollection *taggedLightCollection = (LFXTaggedLightCollection *) self.detailItem;
 	
 	NSMutableString *string = [NSMutableString new];
 	
-	[string appendFormat:@"Tagged Light Collection\n"];
-	[string appendFormat:@"Tag = %@\n", taggedLightCollection.tag];
+	[string appendFormat:@"Tag = '%@'\n", taggedLightCollection.tag];
 	[string appendFormat:@"Power State = %@\n", NSStringFromLFXFuzzyPowerState(taggedLightCollection.fuzzyPowerState)];
 	[string appendFormat:@"Color = %@\n", taggedLightCollection.color];
 	[string appendFormat:@"Lights = %@", [taggedLightCollection.lights valueForKeyPath:@"label"]];
@@ -110,6 +114,18 @@
 - (void)light:(LFXLight *)light didChangePowerState:(LFXPowerState)powerState
 {
 	NSLog(@"Light: %@ Did Change Power State: %@", light, NSStringFromLFXPowerState(powerState));
+	[self updateViewForLight];
+}
+
+- (void)light:(LFXLight *)light didChangeMeshFirmwareVersion:(NSString *)meshFirmwareVersion
+{
+	NSLog(@"Light: %@ Did Change Mesh Firmware Version: %@", light, meshFirmwareVersion);
+	[self updateViewForLight];
+}
+
+- (void)light:(LFXLight *)light didChangeWifiFirmwareVersion:(NSString *)wifiFirmwareVersion
+{
+	NSLog(@"Light: %@ Did Change Wifi Firmware Version: %@", light, wifiFirmwareVersion);
 	[self updateViewForLight];
 }
 

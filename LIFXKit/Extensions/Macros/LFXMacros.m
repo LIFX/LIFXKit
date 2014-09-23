@@ -8,3 +8,4 @@
 
 #import "LFXMacros.h"
 
+int LFXLogLevel = LFXLogLevelWarn;

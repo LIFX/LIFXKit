@@ -1,0 +1,6 @@
+//
+//  LIFX SDK Obj-C
+//  Copyright (c) 2014 LIFX Labs. All rights reserved.
+//
+
+#include "Version.xcconfig"

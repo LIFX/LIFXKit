@@ -22,6 +22,8 @@ typedef NS_ENUM(NSInteger, TableSection) {
 @property (nonatomic) NSArray *lights;
 @property (nonatomic) NSArray *taggedLightCollections;
 
+@property (nonatomic) UIView *connectionStatusView;
+
 @end
 
 @implementation MasterViewController
@@ -37,10 +39,23 @@ typedef NS_ENUM(NSInteger, TableSection) {
 	return self;
 }
 
+- (void)viewDidLoad
+{
+	[super viewDidLoad];
+	
+	self.connectionStatusView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 12, 12)];
+	self.connectionStatusView.backgroundColor = [UIColor redColor];
+	self.connectionStatusView.layer.cornerRadius = self.connectionStatusView.frame.size.height / 2.0;
+	self.connectionStatusView.layer.borderWidth = 1.0 / [UIScreen mainScreen].scale;
+	self.connectionStatusView.layer.borderColor = [UIColor darkGrayColor].CGColor;
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.connectionStatusView];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	[self updateTitle];
+	[self updateNavBar];
 	[self updateLights];
 	[self updateTags];
 }
@@ -57,9 +72,11 @@ typedef NS_ENUM(NSInteger, TableSection) {
 	[self.tableView reloadData];
 }
 
-- (void)updateTitle
+- (void)updateNavBar
 {
-	self.title = [NSString stringWithFormat:@"LIFX Browser (%@)", self.lifxNetworkContext.isConnected ? @"connected" : @"searching"];
+    BOOL isConnected = (self.lifxNetworkContext.connectionState == LFXConnectionStateConnected);
+	self.title = [NSString stringWithFormat:@"LIFX Browser (%@)", isConnected ? @"connected" : @"searching"];
+	self.connectionStatusView.backgroundColor = isConnected ? [UIColor greenColor] : [UIColor redColor];
 }
 
 #pragma mark - LFXNetworkContextObserver
@@ -67,13 +84,13 @@ typedef NS_ENUM(NSInteger, TableSection) {
 - (void)networkContextDidConnect:(LFXNetworkContext *)networkContext
 {
 	NSLog(@"Network Context Did Connect");
-	[self updateTitle];
+	[self updateNavBar];
 }
 
 - (void)networkContextDidDisconnect:(LFXNetworkContext *)networkContext
 {
 	NSLog(@"Network Context Did Disconnect");
-	[self updateTitle];
+	[self updateNavBar];
 }
 
 - (void)networkContext:(LFXNetworkContext *)networkContext didAddTaggedLightCollection:(LFXTaggedLightCollection *)collection

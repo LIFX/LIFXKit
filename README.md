@@ -1,22 +1,45 @@
 # LIFXKit
 
-LIFXKit is the LIFX SDK for Objective-C. LIFXKit currently supports iOS. OS X support is coming soon.
+LIFXKit is the LIFX SDK for Objective-C. LIFXKit supports iOS and OS X.
 
 ## Installation
 
+Various installation methods are available. Choose the method that best suits your project:
+
+* [CocoaPods Installation](#cocoapods-installation)
+* [Framework Installation](#framework-installation)
+* [Xcode Sub-Project Installation](#xcode-sub-project-installation)
+
 ### CocoaPods Installation
-LIFXKit will be published in the public CocoaPod Specs repo shortly. Until then, you can use LIFXKit with CocoaPods by add the following to your Podfile:
+To use LIFXKit with CocoaPods, simply add the following to your Podfile:
 
-	pod 'LIFXKit', :git => 'https://github.com/LIFX/LIFXKit.git', :tag => 'v0.5'
+```ruby
+pod 'LIFXKit'
+```
 
-### Xcode Sub-Project Installation
-1. Drag `LIFXKit.xcodeproj` into your Xcode project as a sub-project. Go to the Products source group within the LIFXKit sub-project, then drag `libLIFXKit.a` into your App Target's Linked Frameworks and Libraries list.
-2. Configure your Target to link against the follow system Frameworks/Libraries:
+### Framework Installation
+1. Download `LIFXKit.Framework` for your project's platform (iOS or OS X).
+2. Add `LIFXKit.Framework` to your project.
+3. Configure your App Target to link against the following Frameworks and Libraries:
+	- `LIFXKit.framework`
 	- `SystemConfiguration.framework`
 	- `libz.dylib`
-3. Ensure that your target is configured to link against categories from static libraries correctly. To do this, ensure that the `Other Linker Flags` Build Settings for your app target contains `-ObjC`.
+4. iOS only:
+  - Ensure that your target is configured to link against categories from static libraries correctly. To do this, ensure that the `Other Linker Flags` Build Settings for your app target contains `-ObjC`.
+5. OS X only:
+  - Open "Build Phases" for your target and add a "Copy Files" build phase (via menu `Editor`/`Add Build Phase`/`Add Copy Files Build Phase`)
+  - Expand the newly added "Copy Files" build phase and change the Destination to `Frameworks`.
+  - Add `LIFXKit.framework` to the "Copy Files" build phase.
 
-Once you've configured your Xcode project with either method, add `#import <LIFXKit/LIFXKit.h>` to your source files and start hacking away!
+### Xcode Sub-Project Installation
+1. Drag `LIFXKit.xcodeproj` into your Xcode project as a sub-project.
+2. Go to the Products source group within the LIFXKit sub-project then drag `libLIFXKit.a` for iOS (or `libLIFXKitMac.a` for OS X) into your App Target's Linked Frameworks and Libraries list.
+3. Configure your App Target to link against the following system Frameworks and Libraries:
+	- `SystemConfiguration.framework`
+	- `libz.dylib`
+4. Ensure that your target is configured to link against categories from static libraries correctly. To do this, ensure that the `Other Linker Flags` Build Settings for your app target contains `-ObjC`.
+
+Once you've configured your Xcode project with any of the above methods, add `#import <LIFXKit/LIFXKit.h>` to your source files and start hacking away!
 
 ## Quick Examples
 
@@ -43,7 +66,7 @@ LFXTaggedLightCollection *kitchen = [localNetworkContext taggedLightCollectionFo
 Set every light to a random color:
 ```objc
 LFXNetworkContext *localNetworkContext = [[LFXClient sharedClient] localNetworkContext];
-for (LFXLight *aLight in localNetworkContext.allLightsCollection.lights)
+for (LFXLight *aLight in localNetworkContext.allLightsCollection)
 {
 	LFXHSBKColor *color = [LFXHSBKColor colorWithHue:arc4random()%360 saturation:1.0 brightness:1.0];
 	[aLight setColor:color];
@@ -76,7 +99,7 @@ A `LFXLight` object represents an individual LIFX Light, and there will be only 
 
 ### Light Collections
 
-Light Collections (`LFXLightCollection`) are classes that encapsulate a group of LIFX lights. They can have their light state manipulated in the same way that an individual light can. You can access the lights within a Light Collection through the `.lights` property.
+Light Collections (`LFXLightCollection`) are classes that encapsulate a group of LIFX lights. They can have their light state manipulated in the same way that an individual light can. You can access the lights within a Light Collection through the `.lights` property. `LFXLightCollection` conforms to `NSFastEnumeration`, so you can enumerate the Lights in a Light Collection using `for (LFXLight *aLight in lightCollection) {…}`. 
 
 ### The All Lights Collection
 

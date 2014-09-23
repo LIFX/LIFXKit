@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8380736F190641F4005D2657 /* LFXBrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380736D190641F4005D2657 /* LFXBrowserWindowController.m */; };
+		83807370190641F4005D2657 /* LFXBrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8380736E190641F4005D2657 /* LFXBrowserWindow.xib */; };
+		838073781906491F005D2657 /* LFXBrowserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838073771906491F005D2657 /* LFXBrowserTableViewController.m */; };
+		8380737B19065189005D2657 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380737A19065189005D2657 /* libz.dylib */; };
+		838EE99519063D1E006080E1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838EE99419063D1E006080E1 /* Cocoa.framework */; };
+		838EE99F19063D1E006080E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 838EE99D19063D1E006080E1 /* InfoPlist.strings */; };
+		838EE9A119063D1E006080E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 838EE9A019063D1E006080E1 /* main.m */; };
+		838EE9A519063D1E006080E1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 838EE9A319063D1E006080E1 /* Credits.rtf */; };
+		838EE9A819063D1E006080E1 /* LFXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 838EE9A719063D1E006080E1 /* LFXAppDelegate.m */; };
+		838EE9AB19063D1E006080E1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838EE9A919063D1E006080E1 /* MainMenu.xib */; };
+		838EE9AD19063D1E006080E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838EE9AC19063D1E006080E1 /* Images.xcassets */; };
+		838EE9B419063D1E006080E1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838EE9B319063D1E006080E1 /* XCTest.framework */; };
+		838EE9B519063D1E006080E1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838EE99419063D1E006080E1 /* Cocoa.framework */; };
+		838EE9BD19063D1E006080E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 838EE9BB19063D1E006080E1 /* InfoPlist.strings */; };
+		838EE9BF19063D1E006080E1 /* LIFX_Browser_MacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 838EE9BE19063D1E006080E1 /* LIFX_Browser_MacTests.m */; };
+		838EE9D119063E51006080E1 /* libLIFXKitMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 838EE9D019063D53006080E1 /* libLIFXKitMac.a */; };
+		83A9BF1F19073B0B00CBF779 /* LFXLightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A9BF1D19073B0B00CBF779 /* LFXLightDetailViewController.m */; };
+		83A9BF2019073B0B00CBF779 /* LFXLightDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A9BF1E19073B0B00CBF779 /* LFXLightDetailViewController.xib */; };
+		83A9BF261907751200CBF779 /* LFXTaggedLightCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A9BF241907751200CBF779 /* LFXTaggedLightCollectionViewController.m */; };
+		83A9BF271907751200CBF779 /* LFXTaggedLightCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A9BF251907751200CBF779 /* LFXTaggedLightCollectionViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		838EE9B619063D1E006080E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 838EE98919063D1E006080E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 838EE99019063D1E006080E1;
+			remoteInfo = "LIFX Browser Mac";
+		};
+		838EE9CD19063D53006080E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 838EE9C819063D52006080E1 /* LIFXKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01A9104D18D027B200AD0A54;
+			remoteInfo = "LIFXKit iOS Static Library";
+		};
+		838EE9CF19063D53006080E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 838EE9C819063D52006080E1 /* LIFXKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 838EE913190626E6006080E1;
+			remoteInfo = "LIFXKit OS X Static Library";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8380736C190641F4005D2657 /* LFXBrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXBrowserWindowController.h; sourceTree = "<group>"; };
+		8380736D190641F4005D2657 /* LFXBrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXBrowserWindowController.m; sourceTree = "<group>"; };
+		8380736E190641F4005D2657 /* LFXBrowserWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFXBrowserWindow.xib; sourceTree = "<group>"; };
+		838073761906491F005D2657 /* LFXBrowserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXBrowserTableViewController.h; sourceTree = "<group>"; };
+		838073771906491F005D2657 /* LFXBrowserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXBrowserTableViewController.m; sourceTree = "<group>"; };
+		8380737A19065189005D2657 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		838EE99119063D1E006080E1 /* LIFX Browser Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LIFX Browser Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		838EE99419063D1E006080E1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		838EE99719063D1E006080E1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		838EE99819063D1E006080E1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		838EE99919063D1E006080E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		838EE99C19063D1E006080E1 /* LIFX Browser Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LIFX Browser Mac-Info.plist"; sourceTree = "<group>"; };
+		838EE99E19063D1E006080E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		838EE9A019063D1E006080E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		838EE9A219063D1E006080E1 /* LIFX Browser Mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LIFX Browser Mac-Prefix.pch"; sourceTree = "<group>"; };
+		838EE9A419063D1E006080E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		838EE9A619063D1E006080E1 /* LFXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFXAppDelegate.h; sourceTree = "<group>"; };
+		838EE9A719063D1E006080E1 /* LFXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFXAppDelegate.m; sourceTree = "<group>"; };
+		838EE9AA19063D1E006080E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		838EE9AC19063D1E006080E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		838EE9B219063D1E006080E1 /* LIFX Browser MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LIFX Browser MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		838EE9B319063D1E006080E1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		838EE9BA19063D1E006080E1 /* LIFX Browser MacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LIFX Browser MacTests-Info.plist"; sourceTree = "<group>"; };
+		838EE9BC19063D1E006080E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		838EE9BE19063D1E006080E1 /* LIFX_Browser_MacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LIFX_Browser_MacTests.m; sourceTree = "<group>"; };
+		838EE9C819063D52006080E1 /* LIFXKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LIFXKit.xcodeproj; path = ../../LIFXKit/LIFXKit.xcodeproj; sourceTree = "<group>"; };
+		83A9BF1C19073B0B00CBF779 /* LFXLightDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXLightDetailViewController.h; sourceTree = "<group>"; };
+		83A9BF1D19073B0B00CBF779 /* LFXLightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXLightDetailViewController.m; sourceTree = "<group>"; };
+		83A9BF1E19073B0B00CBF779 /* LFXLightDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFXLightDetailViewController.xib; sourceTree = "<group>"; };
+		83A9BF231907751200CBF779 /* LFXTaggedLightCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFXTaggedLightCollectionViewController.h; sourceTree = "<group>"; };
+		83A9BF241907751200CBF779 /* LFXTaggedLightCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFXTaggedLightCollectionViewController.m; sourceTree = "<group>"; };
+		83A9BF251907751200CBF779 /* LFXTaggedLightCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFXTaggedLightCollectionViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		838EE98E19063D1E006080E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8380737B19065189005D2657 /* libz.dylib in Frameworks */,
+				838EE9D119063E51006080E1 /* libLIFXKitMac.a in Frameworks */,
+				838EE99519063D1E006080E1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838EE9AF19063D1E006080E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838EE9B519063D1E006080E1 /* Cocoa.framework in Frameworks */,
+				838EE9B419063D1E006080E1 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8380736A190641CA005D2657 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				838EE9A619063D1E006080E1 /* LFXAppDelegate.h */,
+				838EE9A719063D1E006080E1 /* LFXAppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		8380736B190641D4005D2657 /* Browser Window */ = {
+			isa = PBXGroup;
+			children = (
+				8380736C190641F4005D2657 /* LFXBrowserWindowController.h */,
+				8380736D190641F4005D2657 /* LFXBrowserWindowController.m */,
+				8380736E190641F4005D2657 /* LFXBrowserWindow.xib */,
+			);
+			name = "Browser Window";
+			sourceTree = "<group>";
+		};
+		83807373190646ED005D2657 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				838EE9A919063D1E006080E1 /* MainMenu.xib */,
+			);
+			name = "Main Menu";
+			sourceTree = "<group>";
+		};
+		838EE98819063D1E006080E1 = {
+			isa = PBXGroup;
+			children = (
+				838EE9C819063D52006080E1 /* LIFXKit.xcodeproj */,
+				838EE99A19063D1E006080E1 /* LIFX Browser Mac */,
+				838EE9B819063D1E006080E1 /* LIFX Browser MacTests */,
+				838EE99319063D1E006080E1 /* Frameworks */,
+				838EE99219063D1E006080E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		838EE99219063D1E006080E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				838EE99119063D1E006080E1 /* LIFX Browser Mac.app */,
+				838EE9B219063D1E006080E1 /* LIFX Browser MacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		838EE99319063D1E006080E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8380737A19065189005D2657 /* libz.dylib */,
+				838EE99419063D1E006080E1 /* Cocoa.framework */,
+				838EE9B319063D1E006080E1 /* XCTest.framework */,
+				838EE99619063D1E006080E1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		838EE99619063D1E006080E1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				838EE99719063D1E006080E1 /* AppKit.framework */,
+				838EE99819063D1E006080E1 /* CoreData.framework */,
+				838EE99919063D1E006080E1 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		838EE99A19063D1E006080E1 /* LIFX Browser Mac */ = {
+			isa = PBXGroup;
+			children = (
+				8380736A190641CA005D2657 /* App Delegate */,
+				83A9BF1819073AC000CBF779 /* Browser Table View */,
+				8380736B190641D4005D2657 /* Browser Window */,
+				83A9BF1B19073AD300CBF779 /* Light Detail View */,
+				83807373190646ED005D2657 /* Main Menu */,
+				83A9BF22190774FA00CBF779 /* Tagged Light Collection View */,
+				838EE9AC19063D1E006080E1 /* Images.xcassets */,
+				838EE99B19063D1E006080E1 /* Supporting Files */,
+			);
+			path = "LIFX Browser Mac";
+			sourceTree = "<group>";
+		};
+		838EE99B19063D1E006080E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				838EE99C19063D1E006080E1 /* LIFX Browser Mac-Info.plist */,
+				838EE99D19063D1E006080E1 /* InfoPlist.strings */,
+				838EE9A019063D1E006080E1 /* main.m */,
+				838EE9A219063D1E006080E1 /* LIFX Browser Mac-Prefix.pch */,
+				838EE9A319063D1E006080E1 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		838EE9B819063D1E006080E1 /* LIFX Browser MacTests */ = {
+			isa = PBXGroup;
+			children = (
+				838EE9BE19063D1E006080E1 /* LIFX_Browser_MacTests.m */,
+				838EE9B919063D1E006080E1 /* Supporting Files */,
+			);
+			path = "LIFX Browser MacTests";
+			sourceTree = "<group>";
+		};
+		838EE9B919063D1E006080E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				838EE9BA19063D1E006080E1 /* LIFX Browser MacTests-Info.plist */,
+				838EE9BB19063D1E006080E1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		838EE9C919063D52006080E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				838EE9CE19063D53006080E1 /* libLIFXKit.a */,
+				838EE9D019063D53006080E1 /* libLIFXKitMac.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83A9BF1819073AC000CBF779 /* Browser Table View */ = {
+			isa = PBXGroup;
+			children = (
+				838073761906491F005D2657 /* LFXBrowserTableViewController.h */,
+				838073771906491F005D2657 /* LFXBrowserTableViewController.m */,
+			);
+			name = "Browser Table View";
+			sourceTree = "<group>";
+		};
+		83A9BF1B19073AD300CBF779 /* Light Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				83A9BF1C19073B0B00CBF779 /* LFXLightDetailViewController.h */,
+				83A9BF1D19073B0B00CBF779 /* LFXLightDetailViewController.m */,
+				83A9BF1E19073B0B00CBF779 /* LFXLightDetailViewController.xib */,
+			);
+			name = "Light Detail View";
+			sourceTree = "<group>";
+		};
+		83A9BF22190774FA00CBF779 /* Tagged Light Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				83A9BF231907751200CBF779 /* LFXTaggedLightCollectionViewController.h */,
+				83A9BF241907751200CBF779 /* LFXTaggedLightCollectionViewController.m */,
+				83A9BF251907751200CBF779 /* LFXTaggedLightCollectionViewController.xib */,
+			);
+			name = "Tagged Light Collection View";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		838EE99019063D1E006080E1 /* LIFX Browser Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 838EE9C219063D1E006080E1 /* Build configuration list for PBXNativeTarget "LIFX Browser Mac" */;
+			buildPhases = (
+				838EE98D19063D1E006080E1 /* Sources */,
+				838EE98E19063D1E006080E1 /* Frameworks */,
+				838EE98F19063D1E006080E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LIFX Browser Mac";
+			productName = "LIFX Browser Mac";
+			productReference = 838EE99119063D1E006080E1 /* LIFX Browser Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		838EE9B119063D1E006080E1 /* LIFX Browser MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 838EE9C519063D1E006080E1 /* Build configuration list for PBXNativeTarget "LIFX Browser MacTests" */;
+			buildPhases = (
+				838EE9AE19063D1E006080E1 /* Sources */,
+				838EE9AF19063D1E006080E1 /* Frameworks */,
+				838EE9B019063D1E006080E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				838EE9B719063D1E006080E1 /* PBXTargetDependency */,
+			);
+			name = "LIFX Browser MacTests";
+			productName = "LIFX Browser MacTests";
+			productReference = 838EE9B219063D1E006080E1 /* LIFX Browser MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		838EE98919063D1E006080E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LFX;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "LIFX Labs";
+				TargetAttributes = {
+					838EE9B119063D1E006080E1 = {
+						TestTargetID = 838EE99019063D1E006080E1;
+					};
+				};
+			};
+			buildConfigurationList = 838EE98C19063D1E006080E1 /* Build configuration list for PBXProject "LIFX Browser Mac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 838EE98819063D1E006080E1;
+			productRefGroup = 838EE99219063D1E006080E1 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 838EE9C919063D52006080E1 /* Products */;
+					ProjectRef = 838EE9C819063D52006080E1 /* LIFXKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				838EE99019063D1E006080E1 /* LIFX Browser Mac */,
+				838EE9B119063D1E006080E1 /* LIFX Browser MacTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		838EE9CE19063D53006080E1 /* libLIFXKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLIFXKit.a;
+			remoteRef = 838EE9CD19063D53006080E1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		838EE9D019063D53006080E1 /* libLIFXKitMac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLIFXKitMac.a;
+			remoteRef = 838EE9CF19063D53006080E1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		838EE98F19063D1E006080E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838EE99F19063D1E006080E1 /* InfoPlist.strings in Resources */,
+				838EE9AD19063D1E006080E1 /* Images.xcassets in Resources */,
+				83A9BF2019073B0B00CBF779 /* LFXLightDetailViewController.xib in Resources */,
+				838EE9A519063D1E006080E1 /* Credits.rtf in Resources */,
+				83807370190641F4005D2657 /* LFXBrowserWindow.xib in Resources */,
+				838EE9AB19063D1E006080E1 /* MainMenu.xib in Resources */,
+				83A9BF271907751200CBF779 /* LFXTaggedLightCollectionViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838EE9B019063D1E006080E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838EE9BD19063D1E006080E1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		838EE98D19063D1E006080E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A9BF261907751200CBF779 /* LFXTaggedLightCollectionViewController.m in Sources */,
+				838EE9A119063D1E006080E1 /* main.m in Sources */,
+				838EE9A819063D1E006080E1 /* LFXAppDelegate.m in Sources */,
+				8380736F190641F4005D2657 /* LFXBrowserWindowController.m in Sources */,
+				83A9BF1F19073B0B00CBF779 /* LFXLightDetailViewController.m in Sources */,
+				838073781906491F005D2657 /* LFXBrowserTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838EE9AE19063D1E006080E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838EE9BF19063D1E006080E1 /* LIFX_Browser_MacTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		838EE9B719063D1E006080E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 838EE99019063D1E006080E1 /* LIFX Browser Mac */;
+			targetProxy = 838EE9B619063D1E006080E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		838EE99D19063D1E006080E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				838EE99E19063D1E006080E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		838EE9A319063D1E006080E1 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				838EE9A419063D1E006080E1 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		838EE9A919063D1E006080E1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				838EE9AA19063D1E006080E1 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		838EE9BB19063D1E006080E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				838EE9BC19063D1E006080E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		838EE9C019063D1E006080E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		838EE9C119063D1E006080E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		838EE9C319063D1E006080E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LIFX Browser Mac/LIFX Browser Mac-Prefix.pch";
+				INFOPLIST_FILE = "LIFX Browser Mac/LIFX Browser Mac-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		838EE9C419063D1E006080E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LIFX Browser Mac/LIFX Browser Mac-Prefix.pch";
+				INFOPLIST_FILE = "LIFX Browser Mac/LIFX Browser Mac-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		838EE9C619063D1E006080E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LIFX Browser Mac.app/Contents/MacOS/LIFX Browser Mac";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LIFX Browser Mac/LIFX Browser Mac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LIFX Browser MacTests/LIFX Browser MacTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		838EE9C719063D1E006080E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LIFX Browser Mac.app/Contents/MacOS/LIFX Browser Mac";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LIFX Browser Mac/LIFX Browser Mac-Prefix.pch";
+				INFOPLIST_FILE = "LIFX Browser MacTests/LIFX Browser MacTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		838EE98C19063D1E006080E1 /* Build configuration list for PBXProject "LIFX Browser Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				838EE9C019063D1E006080E1 /* Debug */,
+				838EE9C119063D1E006080E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		838EE9C219063D1E006080E1 /* Build configuration list for PBXNativeTarget "LIFX Browser Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				838EE9C319063D1E006080E1 /* Debug */,
+				838EE9C419063D1E006080E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		838EE9C519063D1E006080E1 /* Build configuration list for PBXNativeTarget "LIFX Browser MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				838EE9C619063D1E006080E1 /* Debug */,
+				838EE9C719063D1E006080E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 838EE98919063D1E006080E1 /* Project object */;
+}

@@ -1971,7 +1971,7 @@ enum GCDAsyncUdpSocketConfig
 			close(socketFD);
 			return SOCKET_NULL;
 		}
-		
+
 		int reuseport = 1;
 		status = setsockopt(socketFD, SOL_SOCKET, SO_REUSEPORT, &reuseport, sizeof(reuseport));
 		if (status == -1)
