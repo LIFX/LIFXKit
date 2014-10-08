@@ -14,7 +14,9 @@
 
 @interface LFXWiFiObserverOSX ()
 
-@property (strong) NSArray *watchedInterfaces;
+@property (strong) NSMutableSet *activeInterfaceNames;
+@property (strong) NSMutableDictionary *trackedInterfaces;
+
 @property (strong) NSOperationQueue *serialObservationQueue;
 
 @end
@@ -33,7 +35,6 @@
                                                  CWLinkDidChangeNotification,
                                                  CWModeDidChangeNotification,
                                                  CWPowerDidChangeNotification,
-                                                 CWServiceDidChangeNotification,
                                                  CWSSIDDidChangeNotification,
                                                  ];
 
@@ -41,7 +42,13 @@
         
         void ((^handleWifiChangeNotification)(NSNotification *notification)) = ^(NSNotification *notification) {
             MakeStrongRef(weakSelf, self);
-            [self updateNetworkInfo];
+
+            NSString *interfaceName = notification.object;
+            if (interfaceName)
+            {
+                [self updateInterfaceStateWithName:interfaceName];
+                [self networkInfoNeedsUpdate];
+            }
         };
 
         NSOperationQueue *serialObservationQueue = [[NSOperationQueue alloc] init];
@@ -57,24 +64,56 @@
                                         usingBlock:handleWifiChangeNotification];
         }
 
-        LFXLogVerbose(@"%@ %@: WLAN notifications registered = %@", self, NSStringFromSelector(_cmd), wifiChangeNotificationNames);
+        self.trackedInterfaces = [NSMutableDictionary dictionary];
+        self.activeInterfaceNames = [NSMutableSet set];
 
-        NSMutableArray *watchedInterfaces = [NSMutableArray array];
         for (NSString *interfaceName in [CWInterface interfaceNames])
         {
-            CWInterface *interface = [CWInterface interfaceWithName:interfaceName];
-            if (interface)
-            {
-                [watchedInterfaces addObject:interface];
-            }
+            [self updateInterfaceStateWithName:interfaceName];
         }
 
-        self.watchedInterfaces = watchedInterfaces;
         self.serialObservationQueue = serialObservationQueue;
-
-        LFXLogInfo(@"%@ %@: watchedInterfaces = %@", self, NSStringFromSelector(_cmd), watchedInterfaces);
     }
     return self;
+}
+
+- (void)updateInterfaceStateWithName:(NSString *)interfaceName
+{
+    CWInterface *interface = self.trackedInterfaces[interfaceName];
+    if (interface == nil)
+    {
+        interface = [CWInterface interfaceWithName:interfaceName];
+    }
+
+    if (interface)
+    {
+        self.trackedInterfaces[interfaceName] = interface;  // hold any interface references we find to ensure CoreWLAN notifications are sent
+
+        BOOL interfaceIsActive = (interface.powerOn && interface.serviceActive);
+
+        if (interfaceIsActive)
+        {
+            [self.activeInterfaceNames addObject:interfaceName];
+        }
+        else
+        {
+            [self.activeInterfaceNames removeObject:interfaceName];
+        }
+    }
+
+    LFXLogVerbose(@"%@ %@: active interfaces = %@", self, NSStringFromSelector(_cmd), self.activeInterfaceNames);
+}
+
+- (void)networkInfoNeedsUpdate
+{
+    // coalesce network info updates for efficiency
+    static NSTimeInterval const coalesceDelay = 0.2;
+    SEL updateNetworkInfoSelector = @selector(updateNetworkInfo);
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:updateNetworkInfoSelector object:nil];
+        [self performSelector:updateNetworkInfoSelector withObject:nil afterDelay:coalesceDelay];
+    });
 }
 
 
@@ -85,14 +124,20 @@
     NSString *ssid = nil;
     NSString *bssid = nil;
 
-    for (CWInterface *interface in self.watchedInterfaces)
+    // Select an active wifi interface
+    NSString *interfaceName = [self.activeInterfaceNames anyObject];
+    if (interfaceName)
     {
-        if (interface.serviceActive)
+        CWInterface *activeInterface = self.trackedInterfaces[interfaceName];
+        if (activeInterface == nil)
         {
-            ssid = interface.ssid;
-            bssid = interface.bssid;
+            activeInterface = [CWInterface interfaceWithName:interfaceName];
+        }
 
-            break;
+        if (activeInterface)
+        {
+            ssid = activeInterface.ssid;
+            bssid = activeInterface.bssid;
         }
     }
 

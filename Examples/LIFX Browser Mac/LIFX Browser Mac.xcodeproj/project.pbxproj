@@ -30,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8341C03D19DE3EDB00846942 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 838EE9C819063D52006080E1 /* LIFXKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83A18351190889C500CBF7E4;
+			remoteInfo = "LIFXKit OS X Framework";
+		};
 		838EE9B619063D1E006080E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 838EE98919063D1E006080E1 /* Project object */;
@@ -229,6 +236,7 @@
 			children = (
 				838EE9CE19063D53006080E1 /* libLIFXKit.a */,
 				838EE9D019063D53006080E1 /* libLIFXKitMac.a */,
+				8341C03E19DE3EDB00846942 /* LIFXKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -341,6 +349,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		8341C03E19DE3EDB00846942 /* LIFXKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LIFXKit.framework;
+			remoteRef = 8341C03D19DE3EDB00846942 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		838EE9CE19063D53006080E1 /* libLIFXKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -541,6 +556,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LIFX Browser Mac/LIFX Browser Mac-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(OBJROOT)/UninstalledProducts/include",
+				);
 				INFOPLIST_FILE = "LIFX Browser Mac/LIFX Browser Mac-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

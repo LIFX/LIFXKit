@@ -38,6 +38,7 @@ pod 'LIFXKit'
 	- `SystemConfiguration.framework`
 	- `libz.dylib`
 4. Ensure that your target is configured to link against categories from static libraries correctly. To do this, ensure that the `Other Linker Flags` Build Settings for your app target contains `-ObjC`.
+5. On OS X the Release configuration of your project may need an extra `Header Search Path` of `$(OBJROOT)/UninstalledProducts/include` to produce Archive builds.
 
 Once you've configured your Xcode project with any of the above methods, add `#import <LIFXKit/LIFXKit.h>` to your source files and start hacking away!
 

@@ -1085,7 +1085,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = LFX;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "LIFX Labs";
 			};
 			buildConfigurationList = 01A9104818D027B200AD0A54 /* Build configuration list for PBXProject "LIFXKit" */;
@@ -1431,6 +1431,7 @@
 		838EE933190626E7006080E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -1446,12 +1447,14 @@
 				PRODUCT_NAME = LIFXKitMac;
 				PUBLIC_HEADERS_FOLDER_PATH = include/LIFXKit;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		838EE934190626E7006080E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1464,6 +1467,7 @@
 				PRODUCT_NAME = LIFXKitMac;
 				PUBLIC_HEADERS_FOLDER_PATH = include/LIFXKit;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};

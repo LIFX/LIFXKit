@@ -145,11 +145,11 @@ NSString * const LFXTCPGatewayConnectionErrorDomain = @"LFXTCPGatewayConnectionE
 	NSMutableDictionary *parameters = [NSMutableDictionary new];
 	if (self.shouldSkipTLSVerification)
 	{
-		parameters[(id)kCFStreamSSLValidatesCertificateChain] = @NO;
+		parameters[(id)GCDAsyncSocketManuallyEvaluateTrust] = @YES;
 	}
 	if (self.trustedTLSRootCertificate)
 	{
-		parameters[(id)kCFStreamSSLValidatesCertificateChain] = @NO;
+		parameters[(id)GCDAsyncSocketManuallyEvaluateTrust] = @YES;
 	}
 	[self.socket startTLS:parameters];
 }
@@ -265,78 +265,53 @@ NSString * const LFXTCPGatewayConnectionErrorDomain = @"LFXTCPGatewayConnectionE
 	[self.delegate gatewayConnectionDidConnect:self];
 }
 
-- (void)socketDidSecure:(GCDAsyncSocket *)sock
+- (void)socket:(GCDAsyncSocket *)sock didReceiveTrust:(SecTrustRef)trust completionHandler:(void (^)(BOOL))completionHandler
 {
-	LFXLogInfo(@"Connection %@ didSecure to %@:%hu", self, self.gatewayDescriptor.host, self.gatewayDescriptor.port);
+	LFXLogInfo(@"Connection %@ didReceiveTrust: %@", sock, trust);
 	
-#if TARGET_OS_IPHONE
-	if (self.trustedTLSRootCertificate)
+	NSError *validationError;
+	
+	if (self.shouldSkipTLSVerification == NO)
 	{
-		// verify the cert, and fail if appropriate
-		
-		[sock performBlock:^{
-			
-			NSError *validationError;
-			
-			CFReadStreamRef readStream = [sock readStream];
-			
-			// Create SecTrustRef from Stream
-			CFTypeRef ref = CFReadStreamCopyProperty(readStream, kCFStreamPropertySSLPeerCertificates);
-			NSString *hostnameToVerify = self.shouldVerifyTLSHostname ? self.gatewayDescriptor.host : nil;
-			SecPolicyRef policy = SecPolicyCreateSSL(NO, (__bridge CFStringRef)hostnameToVerify);
-			SecTrustRef trust = NULL;
-			SecTrustCreateWithCertificates(ref, policy, &trust);
-			
-			// Verify
-			SecTrustSetAnchorCertificates(trust, (__bridge CFArrayRef)@[(__bridge id)self.trustedTLSRootCertificate]);
-			CFRelease(ref);
-			SecTrustResultType trustResult = kSecTrustResultInvalid;
-			OSStatus status = SecTrustEvaluate(trust, &trustResult);
-			
-			if (status != errSecSuccess)
+		SecTrustSetAnchorCertificates(trust, (__bridge CFArrayRef)@[(__bridge id)self.trustedTLSRootCertificate]);
+		SecTrustResultType trustResult = kSecTrustResultInvalid;
+		OSStatus status = SecTrustEvaluate(trust, &trustResult);
+
+		if (status != errSecSuccess)
+		{
+			LFXLogError(@"Connection %@ TLS validation evaluation error: %i (see SecBase.h)", self, (int)status);
+			validationError = [NSError errorWithDomain:LFXTCPGatewayConnectionErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey: @"TLS Validation Evaluation Error"}];
+		}
+		else
+		{
+			if (trustResult == kSecTrustResultUnspecified || trustResult == kSecTrustResultProceed)
 			{
-				LFXLogError(@"Connection %@ TLS validation evaluation error: %i (see SecBase.h)", self, (int)status);
-				validationError = [NSError errorWithDomain:LFXTCPGatewayConnectionErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey: @"TLS Validation Evaluation Error"}];
+				LFXLogInfo(@"Connection %@ TLS validation succeeded", self);
 			}
 			else
 			{
-				if (trustResult == kSecTrustResultUnspecified || trustResult == kSecTrustResultProceed)
-				{
-					LFXLogInfo(@"Connection %@ TLS validation succeeded", self);
-				}
-				else
-				{
-					LFXLogError(@"Connection %@ TLS validation evaluation failed: %i (see SecTrust.h)", self, (int)trustResult);
-					validationError = [NSError errorWithDomain:LFXTCPGatewayConnectionErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey: @"TLS Validation Failed"}];
-				}
+				LFXLogError(@"Connection %@ TLS validation evaluation failed: %i (see SecTrust.h)", self, (int)trustResult);
+				validationError = [NSError errorWithDomain:LFXTCPGatewayConnectionErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey: @"TLS Validation Failed"}];
 			}
-			
-			dispatch_async(dispatch_get_main_queue(), ^{
-				if (validationError)
-				{
-					[self.delegate gatewayConnection:self didDisconnectWithError:validationError];
-				}
-				else
-				{
-					LFXRunBlockWithDelay(0.1, ^{
-						self.TLSHandshakeIsComplete = YES;
-					});
-				}
-			});
-		}];
-		
+		}
+	}
+
+	if (validationError)
+	{
+		completionHandler(NO);
 	}
 	else
 	{
-		LFXRunBlockWithDelay(0.1, ^{
-			self.TLSHandshakeIsComplete = YES;
-		});
+		completionHandler(YES);
 	}
-#else
+}
+
+- (void)socketDidSecure:(GCDAsyncSocket *)sock
+{
+	LFXLogInfo(@"Connection %@ didSecure to %@:%hu", self, self.gatewayDescriptor.host, self.gatewayDescriptor.port);
 	LFXRunBlockWithDelay(0.1, ^{
 		self.TLSHandshakeIsComplete = YES;
 	});
-#endif
 }
 
 - (void)readSizeFromTCPStream
