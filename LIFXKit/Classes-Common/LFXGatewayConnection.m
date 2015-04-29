@@ -32,6 +32,8 @@
 			return [[LFXTCPGatewayConnection alloc] initWithGatewayDescriptor:gateway messageRateManager:messageRateManager delegate:delegate];
 		case LX_PROTOCOL_DEVICE_SERVICE_UDP:
 			return [[LFXUDPGatewayConnection alloc] initWithGatewayDescriptor:gateway messageRateManager:messageRateManager delegate:delegate];
+		default:
+			return nil;
 	}
 }
 

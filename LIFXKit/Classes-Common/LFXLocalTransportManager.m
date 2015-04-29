@@ -347,6 +347,9 @@
 		
 		LFXLogInfo(@"Service %@/%@:%u has no existing connection, connecting", gateway.protocolString, gateway.host, gateway.port);
 		LFXGatewayConnection *newConnection = [LFXGatewayConnection gatewayConnectionWithGatewayDescriptor:gateway messageRateManager:self.networkContext.messageRateManager delegate:self];
+		if (!newConnection) {
+			return;
+		}
 		self.gatewayConnections[gateway] = newConnection;
 		[newConnection connect];
 		[self connectionStatesDidChange];
