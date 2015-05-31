@@ -9,6 +9,9 @@
 
 typedef LXProtocolType LFXMessageType;
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-property-synthesis"
+
 //===========================================================================
 
 
@@ -891,3 +894,4 @@ typedef LXProtocolType LFXMessageType;
 
 //===========================================================================
 
+#pragma clang diagnostic pop
